@@ -1,0 +1,14 @@
+<% if user = current_user %>
+  <%= link_to "Exit", session_path(@users), :method => :delete %>
+<% end %>
+  <%= link_to "Sign up", new_user_path %>
+  <%= link_to "Sign in", new_session_path %>
+<h1>Geek's door</h1>
+
+<% if user %>
+  <%= render :partial => "form", :locals => { :user => user }%>
+<% else %>
+  <% @users.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
+<% end %>
