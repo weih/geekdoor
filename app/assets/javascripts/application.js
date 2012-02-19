@@ -15,7 +15,21 @@
 //= require jquery.hotkeys
 //= require_tree .
 
+jQuery.fn.submitWithAjax = function() {
+	this.submit(function() {
+		$.post($(this).attr("action"), $(this).serialize(), null, "script");
+		return false;		
+	})
+	return this;
+};
 
+$(document).ready(function() {
+	$('#new_geekdoor').submitWithAjax();
+//	$('.delete_door').click(function(){
+//		$.get(null, $(this).serialize(), null, "script");
+//		return false;
+//	});
+})
 
 // jQuery.ajaxSetup({ 
 //   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}

@@ -1,0 +1,7 @@
+<% @current_doors.each do |door| %>
+<p>
+    <%= door.name %>
+    <%= submit_tag door.hotkey, :class => door.name %>
+    <%= link_to "Delete", geekdoor_path(door), :method => "delete", :class => "delete_door" %>
+</p>
+<% end %>

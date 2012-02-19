@@ -1,9 +1,10 @@
 <%= form_tag("geekdoors/search", :method => "get") do %>
   <%= label_tag "Start from here" %>
-  <%= text_field_tag("keyword", nil, :placeholder => '请输入要搜索的内容') %>
-  <div id="doorid"><%= hidden_field_tag 'do', "id" %></div>
-  <% user.geekdoors.each do |door| %>
-      <%= door.name %> | <%= door.url %>
-      <%= submit_tag door.id, :class => door.name %>
-  <% end %>
+  <%= text_field_tag("keyword", nil, :placeholder => '请输入要搜索的内容', :tabindex => "1") %>
+  
+  <div id="doorid"></div>
+  
+  <div id="doors">
+    <%= render :partial => "door" %>
+  </div>
 <% end %>
