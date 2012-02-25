@@ -4,10 +4,13 @@ class User
   field :password_hash
   field :password_salt
   embeds_many :geekdoors
-
-  before_save :encrypt_password
-    
+  
+  validates_presence_of :password, :on => :create
+  validates_presence_of :email
+  validates_uniqueness_of :email
+  
   attr_accessor :password
+  before_save :encrypt_password
   
   def self.auth(email, password)
     user = User.first(:conditions => {:email => email})
@@ -25,5 +28,9 @@ class User
       self.set(:password_salt, password_salt)
       self.set(:password_hash, password_hash)
     end
+  end
+  
+  def has_door?
+    geekdoors.any?
   end
 end

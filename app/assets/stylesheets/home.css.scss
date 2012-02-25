@@ -3,7 +3,193 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url("texture.png") repeat scroll 0 0 #F596AA;
+	background: url("texture.png") repeat scroll 0 0 #D7C4BB;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #994242;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #999;
+}
+
+ul {
+	list-style: none;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+/*  background-color: #FFF;*/
+  padding: 20px 40px;
+/*  border: solid 3px black;*/
+  margin-top: 20px;
+  position: relative;
+}
+
+/**********
+  Menu
+*/
+
+#menu {
+	text-align: right;
+	margin: 0 0 10px 0;
+}
+
+#menu a {
+	margin: 0 5px 0 5px;
+}
+
+#main h1 {
+	
+}
+
+ul.door {
+	float: left;
+}
+
+ul.door li {
+	margin-bottom: 7px;
+	font-size: 1.3em;
+}
+
+
+#hint {
+	margin: 5px 0 0 0;
+	font-size: 0.9em;
+	color: #494949;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 5px;
+  width: 270px;
+  border: 2px solid #CCC;
+  margin: 0;
+  font-weight: 300;
+  color: #666;
+}
+
+input[type="text"]#keyword {
+	height: 25px;
+	width: 400px;
+	font-size: 14px;
+}
+
+input[type="submit"], .longbar, #done_btn {
+  padding: 7px 10px;
+  font-weight: 900;
+	font-family: sans-serif;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: none;
+  letter-spacing: 1px;
+	cursor: pointer;
+}
+
+#add_btn {
+	background-color: #57A957;
+}
+
+#add_btn:hover {
+	background-color: #0A6928;
+}
+
+#edit_btn {
+	background-color: #992E2B;
+}
+
+#edit_btn:hover {
+	background-color: #6C0003;
+}
+
+#done_btn {
+	background-color: #41992B;
+	top: 0;
+	position: relative;
+}
+
+#done_btn:hover {
+	background-color: #007931;
+}
+
+.door_submit {
+	display: none;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+form .field, form .actions {
+  margin: 12px 0;
+}
+
+.radius {
+	border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }

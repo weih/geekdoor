@@ -1,15 +1,22 @@
-<% if user = current_user %>
-  <%= link_to "Exit", session_path(@users), :method => :delete %>
-<% end %>
-  <%= link_to "Sign up", new_user_path %>
-  <%= link_to "Sign in", new_session_path %>
-<h1>Geek's door</h1>
+<div id="menu">
+  <%= link_to "使用说明", about_path, :target => '_blank' %>
+  <% if current_user %>
+    <%= link_to "退出", session_path(@user), :method => :delete %>
+  <% else %>
+    <%= link_to "注册", new_user_path %>
+    <%= link_to "登录", new_session_path %>
+  <% end %>
+  <div class="clear"></div>
+</div>
 
-<% if user %>
-  <%= render :partial => "form", :locals => { :user => user }%>
-  <%= render :partial => "add" %>
-<% else %>
-  <% @users.each do |user| %>
-    <p><%= user.email %></p>
+<% if @user %>
+  <div id="main" class="clearfix">
+  <center>
+    <h1>极客的任意门</h1>
+    <%= render :partial => "form", :locals => { :user => @user }%>
+  </center>
+  </div>
+  <% if current_user %>
+    <%= render :partial => "add" %> 
   <% end %>
 <% end %>

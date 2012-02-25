@@ -6,7 +6,9 @@ Door::Application.routes.draw do
       get "search"
     end
   end
+  
   root :to => 'home#index'
+  match 'about' => 'home#about', :as => 'about'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

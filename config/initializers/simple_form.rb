@@ -29,7 +29,7 @@ SimpleForm.setup do |config|
   # config.error_notification_id = nil
 
   # You can wrap all inputs in a pre-defined tag.
-  # config.wrapper_tag = :div
+  config.wrapper_tag = :span
 
   # CSS class to add to all wrapper tags.
   # config.wrapper_class = :input

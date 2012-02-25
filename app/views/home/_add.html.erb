@@ -1,6 +1,19 @@
-<%= simple_form_for Geekdoor.new do |f| %>
-  <%= f.input :name %>
-  <%= f.input :url %>
-  <%= f.input :hotkey %>
-  <%= f.button :submit %>
-<% end %>
+<center>
+  <% if !@user.has_door? %>
+  <p>你还没有自己的搜索条呢，点击下面的按钮添加吧！</p>
+  <% end %>
+  <div id="add_btn" class="longbar">
+    <span>Add a new door</span>
+  </div>
+  <% if @user.has_door? %>
+  <div id="edit_btn" class="longbar">
+    <span>Edit my doors</span>
+  </div>
+  <% end %>
+<%= simple_form_for Geekdoor.new, :wrapper => :inline do |f| %>
+  <%= f.input :name, :required => false, :label => false, :input_html => { :maxlength => 15 }, :placeholder => 'Name'%>
+  <%= f.input :url, :required => false, :input_html => { :type => 'text' }, :label => false, :placeholder => 'URL within %s' %>
+  <%= f.input :hotkey, :required => false, :label => false, :input_html => { :maxlength => 1 }, :placeholder => 'Hotkey' %>
+  <%= f.button :submit, "Add", :id => 'done_btn' %>
+<% end %>  
+</center>

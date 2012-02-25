@@ -1,0 +1,6 @@
+<%= simple_form_for  do |f| %>
+  <%= f.input :name, :required => false %>
+  <%= f.input :url, :required => false, :input_html => { :type => 'text' } %>
+  <%= f.input :hotkey, :required => false %>
+  <%= f.button :submit %>
+<% end %>

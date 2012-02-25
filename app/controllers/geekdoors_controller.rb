@@ -1,3 +1,5 @@
+# coding: utf-8
+
 require "erb"
 include ERB::Util
 
@@ -8,9 +10,10 @@ class GeekdoorsController < ApplicationController
   def create
     current_user.geekdoors << Geekdoor.new(params[:geekdoor])
     if current_user.save
-      @current_doors = current_user.geekdoors
+      # @current_doors = current_user.geekdoors
+      @user = current_user
       respond_to do |format|
-        format.html { redirect_to root_path, :notice => "Successfully!" }
+        format.html { redirect_to root_path }
         format.js
       end
     else
@@ -21,22 +24,23 @@ class GeekdoorsController < ApplicationController
   def destroy
     current_user.geekdoors.find(params[:id]).delete
     respond_to do |format|
-      format.html { redirect_to root_path, :notice => "Successfully!" }
+      format.html { redirect_to root_path }
       format.js
     end
   end
   
   def search
+    user = current_user || User.first
     begin
       if params[:hotkey]
-        @door = current_user.geekdoors.where(:hotkey => params[:hotkey])
-        redirect_to get_url(params[:keyword], @door[0].url)
+        @door = user.geekdoors.where(:hotkey => params[:hotkey])[0]
+        redirect_to get_url(params[:keyword], @door.url)
       elsif params[:commit]
-        @door = current_user.geekdoors.where(:hotkey => params[:commit])
-        redirect_to get_url(params[:keyword], @door[0].url)
+        @door = user.geekdoors.where(:hotkey => params[:commit])
+        redirect_to get_url(params[:keyword], @door.url)
       end
     rescue NoMethodError
-      redirect_to root_path, :notice => "Not Binding for this hotkey" 
+      redirect_to root_path, :notice => "这个快捷键还没绑定任何搜索呢（记得关闭这个新窗口）" 
     end
   end
   

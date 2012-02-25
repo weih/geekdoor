@@ -26,9 +26,31 @@ jQuery.fn.submitWithAjax = function() {
 $(document).ready(function() {
 	$('#new_geekdoor').submitWithAjax();
 //	$('.delete_door').click(function(){
-//		$.get(null, $(this).serialize(), null, "script");
+//		$.get($(this).href, { _method: 'delete' }, null, "script");
 //		return false;
 //	});
+	$('#new_geekdoor').hide();
+	$('#add_btn').click(function() {
+		$('.longbar').hide();
+		$('#new_geekdoor').show('slow');
+	});
+	$('#edit_btn').toggle(
+		function() {
+		$('.delete_door').fadeIn('slow');
+		$('#edit_btn').text('Done');
+		$('#edit_btn').addClass('blue');
+	},
+	function() {
+		$('#edit_btn').text('Edit my doors')
+		$('.delete_door').fadeOut('slow');
+		$('#edit_btn').removeClass('blue');
+	}
+	);
+	$('#done_btn').click(function() {
+		$('#new_geekdoor').hide('slow');
+		$('#add_btn').fadeIn('slow');
+		$('#edit_btn').fadeIn('slow');
+	});
 })
 
 // jQuery.ajaxSetup({ 

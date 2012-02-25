@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Door</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>极客的任意门</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <%= yield :head %>
 </head>
 <body>
   <div id="container">

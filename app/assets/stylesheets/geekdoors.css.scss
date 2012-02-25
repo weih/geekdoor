@@ -1,3 +1,54 @@
 // Place all the styles related to the geekdoors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#keyword_field {
+	margin-bottom: 30px;
+}
+
+#doors {
+	text-align: left;
+	float: left;
+}
+
+span.door_name {
+	width: 120px;
+}
+
+span.hotkey {
+	font-size: 12px;
+	font-weight: 700;
+	background-color: #A6A5A3;
+	padding: 3px;
+}
+
+form#new_geekdoor {
+	display: none;
+}
+
+.longbar {
+	margin-bottom: 20px;
+	width: 300px;
+}
+
+.delete_door {
+	display: none;
+	font-size: 12px;
+	color: #AB3B3A;
+}
+
+input#geekdoor_name {
+	width: 150px;
+}
+
+input#geekdoor_url {
+	width: 400px;
+}
+
+input#geekdoor_hotkey {
+	width: 50px;
+}
+
+.pull-right {
+	display: inline;
+}
