@@ -6,19 +6,43 @@
 	margin-bottom: 30px;
 }
 
+#keyword {
+	font-family: "Helvetica Neue", "Comic Sans MS", Verdana, Helvetica, Arial;
+}
+
 #doors {
 	text-align: left;
+	font-family: "Comic Sans MS", Verdana, Helvetica, Arial;
+	color: #3A3226;
+}
+
+ul.door {
 	float: left;
 }
 
+ul.door li {
+	margin-bottom: 7px;
+	font-size: 1.3em;
+}
+
+.door_link {
+/*	cursor: pointer;*/
+}
+
+.door_link:hover {
+/*	background-color: #993F4B;*/
+}
+
+.door_submit {
+	display: none;
+}
+
 span.door_name {
-	width: 120px;
 }
 
 span.hotkey {
 	font-size: 12px;
 	font-weight: 700;
-	background-color: #A6A5A3;
 	padding: 3px;
 }
 
@@ -47,8 +71,4 @@ input#geekdoor_url {
 
 input#geekdoor_hotkey {
 	width: 50px;
-}
-
-.pull-right {
-	display: inline;
 }

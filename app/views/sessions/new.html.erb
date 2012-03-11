@@ -1,11 +1,19 @@
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </p>
-  <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password, params[:password] %>
-  </p>
-  <%= submit_tag "登陆"%>  
+<%= content_for :title do %>
+  Sign in
 <% end %>
+
+<div id="menu">
+  <%= link_to "返回", root_path %>
+</div>
+
+<div class="sign">
+  <%= form_tag sessions_path, :class => "sign_form" do %>
+    <p>
+      <%= email_field_tag :email, params[:email], :placeholder => 'Email' %>
+    </p>
+    <p>
+      <%= password_field_tag :password, params[:password], :placeholder => 'Password' %>
+    </p>
+    <%= submit_tag "登陆", :class => "btn info" %>  
+  <% end %>
+</div>

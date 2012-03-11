@@ -33,6 +33,9 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-livereload'
+  gem 'factory_girl_rails'
+  gem "capybara"
+  gem 'capistrano', '2.9.0'
 end
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0',  :require => 'bcrypt'

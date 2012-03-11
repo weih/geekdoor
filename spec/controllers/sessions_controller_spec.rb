@@ -9,11 +9,4 @@ describe SessionsController do
     end
   end
 
-  describe "GET 'destory'" do
-    it "returns http success" do
-      get 'destory'
-      response.should be_success
-    end
-  end
-
 end

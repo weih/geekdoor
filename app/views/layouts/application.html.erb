@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>极客的任意门</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= csrf_meta_tags %>
-  <%= yield :head %>
-</head>
-<body>
-  <div id="container">
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
-    <%= yield %>
-  </div>
-</body>
+  <head>
+    <title><%= yield :title %></title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
   <%= javascript_include_tag "application" %>
 </html>

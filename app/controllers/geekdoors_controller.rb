@@ -4,7 +4,14 @@ require "erb"
 include ERB::Util
 
 class GeekdoorsController < ApplicationController
-  def new
+  # cause i don't konw how to use delete method with ajax
+  # i use get for instead
+  # should refactor, it just works for now!!
+  def show
+    @user = current_user
+    @user.geekdoors.find(params[:id]).delete
+    render 'destroy'
+    return
   end
 
   def create
@@ -22,7 +29,7 @@ class GeekdoorsController < ApplicationController
   end
 
   def destroy
-    current_user.geekdoors.find(params[:id]).delete
+    # @user.geekdoors.find(params[:id]).delete
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js
@@ -36,7 +43,7 @@ class GeekdoorsController < ApplicationController
         @door = user.geekdoors.where(:hotkey => params[:hotkey])[0]
         redirect_to get_url(params[:keyword], @door.url)
       elsif params[:commit]
-        @door = user.geekdoors.where(:hotkey => params[:commit])
+        @door = user.geekdoors.where(:hotkey => params[:commit])[0]
         redirect_to get_url(params[:keyword], @door.url)
       end
     rescue NoMethodError

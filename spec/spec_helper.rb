@@ -29,4 +29,11 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+  
+  config.after do
+    Mongoid.database.collections.each do |coll|
+      coll.remove if coll.name !~ /system/
+    end
+    Rails.cache.clear
+  end
 end

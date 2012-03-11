@@ -1,7 +1,19 @@
-<center>
-  <%= simple_form_for @user do |f| %>
-    <%= f.input :email, :required => false, :input_html => { :type => 'text' } %>
-    <%= f.input :password, :required => false %>
-    <%= f.button :submit, "注册" %>
+<%= content_for :title do %>
+  Sign up
+<% end %>
+
+<div id="menu">
+  <%= link_to "返回", root_path %>
+</div>
+
+<div class="sign">
+  <%= form_for @user do |f| %>
+    <p>
+      <%= f.email_field :email, :placeholder => 'Email' %>
+    </p>
+    <p>
+      <%= f.password_field :password, :placeholder => 'Password(真不是明文-_-!)' %>
+    </p>
+    <%= f.submit "注册", :class => "btn success" %>  
   <% end %>
-</center>
+</div>

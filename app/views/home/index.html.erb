@@ -1,3 +1,7 @@
+<%= content_for :title do %>
+  Geek Door
+<% end %>
+
 <div id="menu">
   <%= link_to "使用说明", about_path, :target => '_blank' %>
   <% if current_user %>
@@ -6,17 +10,15 @@
     <%= link_to "注册", new_user_path %>
     <%= link_to "登录", new_session_path %>
   <% end %>
-  <div class="clear"></div>
 </div>
 
-<% if @user %>
-  <div id="main" class="clearfix">
+<div id="main" class="clearfix">
   <center>
     <h1>极客的任意门</h1>
     <%= render :partial => "form", :locals => { :user => @user }%>
   </center>
-  </div>
-  <% if current_user %>
-    <%= render :partial => "add" %> 
-  <% end %>
+</div>
+
+<% if current_user %>
+  <%= render :partial => "add" %> 
 <% end %>

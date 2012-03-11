@@ -25,15 +25,27 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ready(function() {
 	$('#new_geekdoor').submitWithAjax();
-//	$('.delete_door').click(function(){
-//		$.get($(this).href, { _method: 'delete' }, null, "script");
-//		return false;
-//	});
-	$('#new_geekdoor').hide();
-	$('#add_btn').click(function() {
-		$('.longbar').hide();
-		$('#new_geekdoor').show('slow');
+	$('.delete_door').click(function(){
+		$.get(this.href, null, null, "script");
+		return false;
 	});
+	$('#new_geekdoor').hide();
+	// $('#add_btn').click(function() {
+	// 	$('.delete_door').fadeOut('slow');
+	// 	$('#new_geekdoor').show('slow');
+	// });
+	$('#add_btn').toggle(
+		function() {
+		$('.delete_door').fadeOut('slow');
+		$('#new_geekdoor').show('slow');
+		$('#add_btn').text('Cancel');
+	},
+	function() {
+		$('#new_geekdoor').show('slow');
+		$('#new_geekdoor').fadeOut('slow');
+		$('#add_btn').text('Add a new door');
+	}
+	);
 	$('#edit_btn').toggle(
 		function() {
 		$('.delete_door').fadeIn('slow');
@@ -51,6 +63,9 @@ $(document).ready(function() {
 		$('#add_btn').fadeIn('slow');
 		$('#edit_btn').fadeIn('slow');
 	});
+	$('.door_link').click(function() {
+		//this.submit();
+	})
 })
 
 // jQuery.ajaxSetup({ 

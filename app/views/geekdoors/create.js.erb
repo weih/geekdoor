@@ -1,2 +1,7 @@
 $("#doors").html("<%= escape_javascript(render("home/door")) %>");
 $('#new_geekdoor')[0].reset();
+$('#add_btn').text('Add a new door');
+$('.delete_door').click(function(){
+	$.get(this.href, null, null, "script");
+	return false;
+});

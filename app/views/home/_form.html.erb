@@ -1,4 +1,4 @@
-<%= form_tag("geekdoors/search", :method => "get", :target => "_blank") do %>
+<%= form_tag("geekdoors/search", :method => "get", :target => "_blank", :id => "main_form") do %>
   <div id="keyword_field">
     <%= text_field_tag("keyword", nil, :placeholder => 'input your keyword', :tabindex => "1") %>
     <p id="hint">Hint: <%= @hint[0] %></p>                                                                                                       
@@ -6,7 +6,7 @@
   
   <div id="doorid"></div>
   
-  <div id="doors">
+  <div id="doors" class="clearfix">
     <%= render :partial => "door" %>
   </div>
 <% end %>
