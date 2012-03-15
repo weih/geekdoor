@@ -40,11 +40,9 @@ class GeekdoorsController < ApplicationController
     user = current_user || User.first
     begin
       if params[:hotkey]
-        @door = user.geekdoors.where(:hotkey => params[:hotkey])[0]
-        redirect_to get_url(params[:keyword], @door.url)
-      elsif params[:commit]
-        @door = user.geekdoors.where(:hotkey => params[:commit])[0]
-        redirect_to get_url(params[:keyword], @door.url)
+        go_search(user, params[:hotkey])
+      elsif params[:commit] # params[:commit] exist when user serach use 'Enter' 
+        go_search(user, params[:commit])
       end
     rescue NoMethodError
       redirect_to root_path, :notice => "这个快捷键还没绑定任何搜索呢（记得关闭这个新窗口）" 
@@ -55,5 +53,10 @@ class GeekdoorsController < ApplicationController
   
   def get_url(keyword, url)
     new_url = url.gsub('%s', url_encode(keyword))
+  end
+  
+  def go_search(user, hotkey)
+    @door = user.geekdoors.where(:hotkey => hotkey)[0]
+    redirect_to get_url(params[:keyword], @door.url)
   end
 end

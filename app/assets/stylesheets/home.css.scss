@@ -4,7 +4,7 @@
 
 body {
 	background: url("texture.png") repeat scroll 0 0 #A5B4C5;
-  font-family: Verdana, Helvetica, Arial;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   text-align: left;
 }
@@ -15,7 +15,7 @@ a img {
 
 a {
   color: #994242;
-	font-weight: 900;
+	font-weight: bold;
 	text-decoration: none;
 }
 
@@ -48,6 +48,11 @@ ul {
 
 #menu a {
 	margin: 0 5px 0 5px;
+}
+
+#menu strong {
+  color: #B85A67;
+  font-family: "Comic Sans MS",Verdana,Helvetica,Arial;
 }
 
 #main h1 {
@@ -92,6 +97,7 @@ input[type="text"]#keyword, form.sign_form input[type="email"], form.sign_form i
 .sign_form input[type="submit"], .new_user input[type="submit"] {
 	padding: 10px 20px;
 	font-size: 1.1em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 /*#add_btn {

@@ -2,9 +2,7 @@
   Sign up
 <% end %>
 
-<div id="menu">
-  <%= link_to "返回", root_path %>
-</div>
+<%= render 'shared/menu_back' %>
 
 <div class="sign">
   <%= form_for @user do |f| %>
@@ -14,6 +12,6 @@
     <p>
       <%= f.password_field :password, :placeholder => 'Password(真不是明文-_-!)' %>
     </p>
-    <%= f.submit "注册", :class => "btn success" %>  
+    <%= f.submit "Register", :class => "btn success" %>  
   <% end %>
 </div>

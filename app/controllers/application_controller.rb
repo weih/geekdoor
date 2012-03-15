@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
   def sign_in(user)
     cookies.permanent[:user_id] = user.id
   end
+  
+  def sample_user
+    User.first
+  end
 end

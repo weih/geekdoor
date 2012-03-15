@@ -38,7 +38,7 @@ $(document).ready(function() {
 		function() {
 		$('.delete_door').fadeOut('slow');
 		$('#new_geekdoor').show('slow');
-		$('#add_btn').text('Cancel');
+		$('#add_btn').text('Done');
 	},
 	function() {
 		$('#new_geekdoor').show('slow');
@@ -59,9 +59,9 @@ $(document).ready(function() {
 	}
 	);
 	$('#done_btn').click(function() {
-		$('#new_geekdoor').hide('slow');
-		$('#add_btn').fadeIn('slow');
-		$('#edit_btn').fadeIn('slow');
+		// $('#new_geekdoor').hide('slow');
+		//$('#add_btn').fadeIn('slow');
+		//$('#edit_btn').fadeIn('slow');
 	});
 	$('.door_link').click(function() {
 		//this.submit();

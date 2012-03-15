@@ -2,9 +2,7 @@
   Sign in
 <% end %>
 
-<div id="menu">
-  <%= link_to "返回", root_path %>
-</div>
+<%= render 'shared/menu_back' %>
 
 <div class="sign">
   <%= form_tag sessions_path, :class => "sign_form" do %>
@@ -14,6 +12,6 @@
     <p>
       <%= password_field_tag :password, params[:password], :placeholder => 'Password' %>
     </p>
-    <%= submit_tag "登陆", :class => "btn info" %>  
+    <%= submit_tag "Sign In", :class => "btn info" %>  
   <% end %>
 </div>

@@ -1,6 +1,5 @@
-module ApplicationHelper  
-  def title(page_title, show_title = true)
-    @content_for_title = page_title.to_s
-    @show_title = show_title
+module ApplicationHelper
+  def get_name_from_email(email)
+    email.split('@')[0]
   end
 end

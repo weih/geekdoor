@@ -3,12 +3,15 @@
 <% end %>
 
 <div id="menu">
-  <%= link_to "使用说明", about_path, :target => '_blank' %>
   <% if current_user %>
-    <%= link_to "退出", session_path(@user), :method => :delete %>
+    <strong>Welcome <%= get_name_from_email(current_user.email) %></strong>
+  <% end %>
+  <%= link_to "Readme", about_path, :target => '_blank' %>
+  <% if current_user %>
+    <%= link_to "Sign Out", session_path(@user), :method => :delete %>
   <% else %>
-    <%= link_to "注册", new_user_path %>
-    <%= link_to "登录", new_session_path %>
+    <%= link_to "Register", new_user_path %>
+    <%= link_to "Sign In", new_session_path %>
   <% end %>
 </div>
 
