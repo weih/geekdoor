@@ -29,7 +29,7 @@ admin.geekdoors.concat([Geekdoor.new(name: "Baidu", url: "http://www.baidu.com/s
                         Geekdoor.new(name: "Taobao", url: "http://s.taobao.com/search?q=%s&keyword=&commend=all&ssid=s5-e&search_type=item&atype=&tracelog=&sourceId=tb.index&initiative_id=tbindexz_20120226", hotkey: "o"),
                         Geekdoor.new(name: "360Buy", url: "http://search.360buy.com/Search?keyword=%s", hotkey: "i"),
                         Geekdoor.new(name: "Amazon.CN", url: "http://www.amazon.cn/s/ref=nb_sb_noss/475-2222454-4134653?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&url=search-alias%3Daps&field-keywords=%s&x=0&y=0", hotkey: "k"),
-                        Geekdoor.new(name: "Zol", url: "http://detail.zol.com.cn/index.php?c=SearchList&keyword=%s&do=%CB%D1+%CB%F7", hotkey: "l"),
+                        Geekdoor.new(name: "Xiami", url: "http://www.xiami.com/search?key=%s&pos=1", hotkey: "l"),
                         Geekdoor.new(name: "Dangdang", url: "http://searchb.dangdang.com/?key=%s", hotkey: "m"),
                         Geekdoor.new(name: "Github", url: "https://github.com/search?q=%s&type=Everything&repo=&langOverride=&start_value=1", hotkey: "h"),
                         Geekdoor.new(name: "Niconico", url: "http://www.nicovideo.jp/search/%s?track=nicouni_search_keyword", hotkey: "y"),
