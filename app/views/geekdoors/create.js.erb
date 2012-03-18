@@ -1,4 +1,5 @@
 $("#doors").html("<%= escape_javascript(render("home/door")) %>");
+$(".avaiable_keys").html("<%= escape_javascript(render("home/unused_hotkeys")) %>");
 $('#new_geekdoor')[0].reset();
 // $('#add_btn').text('Add a new door');
 $('.delete_door').click(function(){

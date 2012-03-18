@@ -3,6 +3,9 @@ class User
   field :email
   field :password_hash
   field :password_salt
+  field :background_color
+  field :foreground_color
+  field :unused_hotkeys, :type => Array, :default => ('0'..'9').to_a + ('a'..'u').to_a + ('w'..'z').to_a
   embeds_many :geekdoors
   
   validates_presence_of :password, :on => :create
@@ -34,5 +37,13 @@ class User
   
   def has_door?
     geekdoors.any?
+  end
+  
+  def get_background_color
+    "style=background-color:##{background_color};" if background_color
+  end
+  
+  def get_foreground_color
+    "style=color:##{foreground_color};" if foreground_color
   end
 end

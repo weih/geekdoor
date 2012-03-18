@@ -34,4 +34,5 @@ admin.geekdoors.concat([Geekdoor.new(name: "Baidu", url: "http://www.baidu.com/s
                         Geekdoor.new(name: "Github", url: "https://github.com/search?q=%s&type=Everything&repo=&langOverride=&start_value=1", hotkey: "h"),
                         Geekdoor.new(name: "Niconico", url: "http://www.nicovideo.jp/search/%s?track=nicouni_search_keyword", hotkey: "y"),
                         Geekdoor.new(name: "Nicosound", url: "http://nicosound.anyap.info/sound/%s", hotkey: "u")])
+admin.save                        
 

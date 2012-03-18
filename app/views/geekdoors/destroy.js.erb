@@ -1,4 +1,5 @@
 $("#doors").html("<%= escape_javascript(render("home/door")) %>");
+$(".avaiable_keys").html("<%= escape_javascript(render("home/unused_hotkeys")) %>");
 $('.delete_door').fadeIn('slow');
 $('.delete_door').click(function(){
 	$.get(this.href, null, null, "script");

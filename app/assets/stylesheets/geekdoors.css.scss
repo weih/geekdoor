@@ -56,6 +56,10 @@ form#new_geekdoor {
 	display: none;
 }
 
+.avaiable_keys {
+  font-family: "Comic Sans MS", "Helvetica Neue", Verdana, Helvetica, Arial;
+}
+
 .longbar {
 	margin-bottom: 20px;
 	width: 300px;
@@ -67,14 +71,14 @@ form#new_geekdoor {
 	color: #AB3B3A;
 }
 
-input#geekdoor_name {
+#container input#geekdoor_name {
 	width: 150px;
 }
 
-input#geekdoor_url {
+#container input#geekdoor_url {
 	width: 400px;
 }
 
-input#geekdoor_hotkey {
+#container input#geekdoor_hotkey {
 	width: 50px;
 }

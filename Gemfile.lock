@@ -5,7 +5,7 @@ GIT
     quiet_assets (0.0.1)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://gems.gzruby.org/
   specs:
     actionmailer (3.2.1)
       actionpack (= 3.2.1)
@@ -56,6 +56,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.1)
       ffi (~> 1.0.6)
+    coderay (1.0.5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -98,6 +99,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.7.1)
     mime-types (1.17.2)
     mongo (1.5.2)
       bson (= 1.5.2)
@@ -116,6 +118,10 @@ GEM
       net-ssh (>= 1.99.1)
     nokogiri (1.5.0)
     polyglot (0.3.3)
+    pry (0.9.8.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
     rack (1.4.1)
     rack-cache (1.1)
       rack (>= 0.4)
@@ -168,6 +174,7 @@ GEM
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    slop (2.4.4)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -200,6 +207,7 @@ DEPENDENCIES
   jquery-rails
   mongo-rails-instrumentation (= 0.2.4)
   mongoid (= 2.4.3)
+  pry
   quiet_assets!
   rails (= 3.2.1)
   rspec-rails

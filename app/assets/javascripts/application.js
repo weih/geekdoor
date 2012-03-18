@@ -13,6 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.hotkeys
+//= require utils
+//= require colorpicker
+//= require eye
+//= require layout
 //= require_tree .
 
 jQuery.fn.submitWithAjax = function() {
@@ -65,7 +69,15 @@ $(document).ready(function() {
 	});
 	$('.door_link').click(function() {
 		//this.submit();
-	})
+	});
+	$('#colorSelector').focus(function() {
+	  $('#background_colorSelector').fadeIn('slow');
+	  $('#foreground_colorSelector').fadeIn('slow');
+	});
+	$('#colorSelector').blur(function() {
+	  $('#background_colorSelector').fadeOut('slow');
+	  $('#foreground_colorSelector').fadeOut('slow');
+	});
 })
 
 // jQuery.ajaxSetup({ 

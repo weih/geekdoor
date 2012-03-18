@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "http://gems.gzruby.org/"
 
 gem 'rails', '3.2.1'
 
@@ -36,6 +36,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem "capybara"
   gem 'capistrano', '2.9.0'
+  gem 'pry'
 end
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0',  :require => 'bcrypt'

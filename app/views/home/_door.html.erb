@@ -7,7 +7,7 @@
                                               :class => "delete_door" %>
         <% end %>
           
-        <span class="door_name"><%= door.name %></span>
+        <span class="door_name" <%= current_user.get_foreground_color if current_user %>><%= door.name %></span>
           <span class="btn hotkey">Ctrl</span> + <span class="btn hotkey"><%= door.hotkey.upcase %></span>
           
         <%= submit_tag door.hotkey, :class => "door_submit" %>        

@@ -17,5 +17,8 @@
     <%= f.input :url, :required => false, :input_html => { :type => 'text' }, :label => false, :placeholder => 'URL' %>
     <%= f.input :hotkey, :required => false, :label => false, :input_html => { :maxlength => 1 }, :placeholder => 'Hotkey' %>
     <%= f.button :submit, "Add", :id => 'done_btn', :class => "btn success" %>
-  <% end %>  
+    <div class="avaiable_keys">
+      <%= render :partial => "unused_hotkeys" %>
+    </div>
+  <% end %>
 </center>

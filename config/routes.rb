@@ -1,5 +1,9 @@
 Door::Application.routes.draw do
-  resources :users
+  resources :users do
+    collection do
+      get :set_color
+    end
+  end
   resources :sessions
   resources :geekdoors do
     collection do

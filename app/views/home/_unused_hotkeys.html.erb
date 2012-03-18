@@ -1,0 +1,4 @@
+Available hotkeys:
+<% current_user.unused_hotkeys.sort.each do |hotkey| %>  
+  <span class="btn hotkey"><%= hotkey.upcase %></span>
+<% end %>

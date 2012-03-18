@@ -13,4 +13,10 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+  
+  def set_color
+    current_user.set(:background_color, params[:background_color]) if params[:background_color]
+    current_user.set(:foreground_color, params[:foreground_color]) if params[:foreground_color]
+    redirect_to root_path
+  end
 end

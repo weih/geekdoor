@@ -9,7 +9,7 @@ class GeekdoorsController < ApplicationController
   # should refactor, it just works for now!!
   def show
     @user = current_user
-    @user.geekdoors.find(params[:id]).delete
+    @user.geekdoors.find(params[:id]).destroy
     render 'destroy'
     return
   end
