@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.hotkeys
-//= require utils
 //= require colorpicker
 //= require eye
 //= require layout

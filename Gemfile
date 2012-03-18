@@ -5,6 +5,10 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Javascript runtime for Ubuntu
+gem 'execjs'
+gem 'therubyracer'
+
 # Mongoid for Mongodb
 gem "mongoid", "2.4.3"
 gem "bson_ext", "1.5.2"
