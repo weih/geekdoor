@@ -27,6 +27,9 @@ jQuery.fn.submitWithAjax = function() {
 };
 
 $(document).ready(function() {
+  $('#done_btn').click(function() {
+    $('#done_btn').val('Adding...');
+  });
 	$('#new_geekdoor').submitWithAjax();
 	$('.delete_door').click(function(){
 		$.get(this.href, null, null, "script");
@@ -62,7 +65,7 @@ $(document).ready(function() {
 	}
 	);
 	$('#done_btn').click(function() {
-		// $('#new_geekdoor').hide('slow');
+		//$('#done_btn').text('Adding..');
 		//$('#add_btn').fadeIn('slow');
 		//$('#edit_btn').fadeIn('slow');
 	});
@@ -77,6 +80,8 @@ $(document).ready(function() {
 	  $('#background_colorSelector').fadeOut('slow');
 	  $('#foreground_colorSelector').fadeOut('slow');
 	});
+	
+  $('.default').dropkick();
 })
 
 // jQuery.ajaxSetup({ 

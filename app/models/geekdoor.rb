@@ -30,6 +30,9 @@ class Geekdoor
   end
   
   def set_key_to_unused
-    self.user.set(:unused_hotkeys, self.user.unused_hotkeys << self.hotkey)
+    unless self.user.unused_hotkeys.include?(self.hotkey)
+      self.user.unused_hotkeys << self.hotkey
+      self.user.set(:unused_hotkeys, self.user.unused_hotkeys)
+    end
   end
 end

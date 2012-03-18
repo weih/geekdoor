@@ -5,9 +5,9 @@
 <div id="menu">
   <% if current_user %>
     <strong>Welcome <%= get_name_from_email(current_user.email) %></strong>
-    <%= link_to "ChangeColor", '#', :id => "colorSelector" %>      
-    <%= link_to "Background Color", '#', :id => "background_colorSelector",  :style => "display:none" %>      
-    <%= link_to "Foreground Color", '#', :id => "foreground_colorSelector",  :style => "display:none" %>      
+    <%= link_to "ChangeColor", '#', :id => "colorSelector" %>            
+    <%= link_to "Background Color", '#', :id => "background_colorSelector",  :style => "display:none" %>
+    <%= link_to "Foreground Color", '#', :id => "foreground_colorSelector",  :style => "display:none" %>
   <% end %>
   <%= link_to "Readme", about_path, :target => '_blank' %>
   <% if current_user %>
