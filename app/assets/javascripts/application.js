@@ -72,16 +72,15 @@ $(document).ready(function() {
 	$('.door_link').click(function() {
 		//this.submit();
 	});
-	$('#colorSelector').focus(function() {
+	$('#colorSelector').click(function() {
+	  $('#colorSelector').hide();
 	  $('#background_colorSelector').fadeIn('slow');
 	  $('#foreground_colorSelector').fadeIn('slow');
 	});
-	$('#colorSelector').blur(function() {
-	  $('#background_colorSelector').fadeOut('slow');
-	  $('#foreground_colorSelector').fadeOut('slow');
-	});
-	
-  $('.default').dropkick();
+  // $('#colorSelector').blur(function() {
+  //   $('#background_colorSelector').fadeOut('slow');
+  //   $('#foreground_colorSelector').fadeOut('slow');
+  // });
 })
 
 // jQuery.ajaxSetup({ 

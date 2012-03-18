@@ -49,6 +49,9 @@
 				//$('.door_name').css('color', '#' + hex);
 			},
 			onSubmit: function (hsb, hex, rgb) {
+    	  $('#background_colorSelector').fadeOut('slow');
+    	  $('#foreground_colorSelector').fadeOut('slow');
+    	  $('#colorSelector').fadeIn('slow');
 				$.get("users/set_color", {"background_color": hex}, null, "script");
 			}
 		});
@@ -67,6 +70,9 @@
 				$('#hint').css('color', '#' + hex);
 			},
 			onSubmit: function (hsb, hex, rgb) {
+    	  $('#background_colorSelector').fadeOut('slow');
+    	  $('#foreground_colorSelector').fadeOut('slow');
+    	  $('#colorSelector').fadeIn('slow');
 				$.get("users/set_color", {"foreground_color": hex}, null, "script");
 			}
 		});		
