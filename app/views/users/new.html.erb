@@ -5,7 +5,7 @@
 <%= render 'shared/menu_back' %>
 
 <div class="sign">
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :validate => true do |f| %>
     <p>
       <%= f.email_field :email, :placeholder => 'Email' %>
     </p>

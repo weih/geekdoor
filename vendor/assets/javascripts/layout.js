@@ -42,6 +42,9 @@
 			},
 			onHide: function (colpkr) {
 				$(colpkr).fadeOut(500);
+    	  $('#background_colorSelector').fadeOut('slow');
+    	  $('#foreground_colorSelector').fadeOut('slow');
+    	  $('#colorSelector').fadeIn('slow');
 				return false;
 			},
 			onChange: function (hsb, hex, rgb) {
@@ -49,9 +52,6 @@
 				//$('.door_name').css('color', '#' + hex);
 			},
 			onSubmit: function (hsb, hex, rgb) {
-    	  $('#background_colorSelector').fadeOut('slow');
-    	  $('#foreground_colorSelector').fadeOut('slow');
-    	  $('#colorSelector').fadeIn('slow');
 				$.get("users/set_color", {"background_color": hex}, null, "script");
 			}
 		});
@@ -63,6 +63,9 @@
 			},
 			onHide: function (colpkr) {
 				$(colpkr).fadeOut(500);
+    	  $('#background_colorSelector').fadeOut('slow');
+    	  $('#foreground_colorSelector').fadeOut('slow');
+    	  $('#colorSelector').fadeIn('slow');
 				return false;
 			},
 			onChange: function (hsb, hex, rgb) {
@@ -70,9 +73,6 @@
 				$('#hint').css('color', '#' + hex);
 			},
 			onSubmit: function (hsb, hex, rgb) {
-    	  $('#background_colorSelector').fadeOut('slow');
-    	  $('#foreground_colorSelector').fadeOut('slow');
-    	  $('#colorSelector').fadeIn('slow');
 				$.get("users/set_color", {"foreground_color": hex}, null, "script");
 			}
 		});		

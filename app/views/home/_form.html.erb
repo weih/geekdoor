@@ -1,7 +1,7 @@
 <%= form_tag("geekdoors/search", :method => "get", :target => "_blank", :id => "main_form") do %>
   <div id="keyword_field">
     <%= text_field_tag("keyword", nil, :placeholder => 'input your keyword', :tabindex => "1") %>
-    <p id="hint" <%= current_user.get_foreground_color if current_user %>>Hint: <%= @hint[0] %></p>                                                                                                       
+    <p id="hint" <%= current_user.get_foreground_color if current_user %>>Hint: <%= hint %></p>                                                                                                       
   </div>
   
   <div id="doorid"></div>

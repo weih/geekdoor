@@ -16,6 +16,7 @@
 //= require colorpicker
 //= require eye
 //= require layout
+//= require rails.validations
 //= require_tree .
 
 jQuery.fn.submitWithAjax = function() {
@@ -50,6 +51,7 @@ $(document).ready(function() {
 		$('#new_geekdoor').show('slow');
 		$('#new_geekdoor').fadeOut('slow');
 		$('#add_btn').text('Add a new door');
+		$('#done_btn').val('Add');
 	}
 	);
 	$('#edit_btn').toggle(

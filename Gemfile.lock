@@ -56,6 +56,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.1)
       ffi (~> 1.0.6)
+    client_side_validations (3.1.4)
     coderay (1.0.5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -202,6 +203,7 @@ DEPENDENCIES
   bson_ext (= 1.5.2)
   capistrano (= 2.9.0)
   capybara
+  client_side_validations
   coffee-rails (~> 3.2.1)
   execjs
   factory_girl_rails

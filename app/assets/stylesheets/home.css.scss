@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url("texture.png") repeat scroll 0 0 #A3C78B; /*a3c78b*/
+	background: url("texture.png") repeat scroll 0 0 #F7F7Fc; /*#A3C78B *a3c78b*/
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   text-align: left;
@@ -121,9 +121,6 @@ input[type="email"]:focus, input[type="url"]:focus {
 	position: relative;
 }
 
-#done_btn:hover {
-}
-
 .clear {
   clear: both;
   height: 0;
@@ -152,28 +149,9 @@ input[type="email"]:focus, input[type="url"]:focus {
   display: inline;
 }
 
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+.field_with_errors .message {
+  color: #D00;
   font-size: 12px;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
 }
 
 form .field, form .actions {
