@@ -17,7 +17,6 @@ class GeekdoorsController < ApplicationController
   def create
     current_user.geekdoors << Geekdoor.new(params[:geekdoor])
     if current_user.save
-      # @current_doors = current_user.geekdoors
       @user = current_user
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -29,11 +28,6 @@ class GeekdoorsController < ApplicationController
   end
 
   def destroy
-    # @user.geekdoors.find(params[:id]).delete
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.js
-    end
   end
   
   def search
@@ -41,7 +35,7 @@ class GeekdoorsController < ApplicationController
     begin
       if params[:hotkey]
         go_search(user, params[:hotkey])
-      elsif params[:commit] # params[:commit] exist when user serach use 'Enter' 
+      elsif params[:commit] # params[:commit] exist when user serach with 'Enter' keypress
         go_search(user, params[:commit])
       end
     rescue NoMethodError
@@ -50,7 +44,6 @@ class GeekdoorsController < ApplicationController
   end
   
   protected
-  
   def get_url(keyword, url)
     new_url = url.gsub('%s', url_encode(keyword))
   end

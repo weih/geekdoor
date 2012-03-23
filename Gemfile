@@ -39,9 +39,12 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'factory_girl_rails'
   gem "capybara"
+  gem 'launchy'
+  gem 'database_cleaner'
   gem 'capistrano', '2.9.0'
   gem 'pry'
 end
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0',  :require => 'bcrypt'
 

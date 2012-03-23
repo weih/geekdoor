@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$.get(this.href, null, null, "script");
 		return false;
 	});
-	$('#new_geekdoor').hide();
+  // $('#new_geekdoor').hide();
 	// $('#add_btn').click(function() {
 	// 	$('.delete_door').fadeOut('slow');
 	// 	$('#new_geekdoor').show('slow');

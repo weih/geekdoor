@@ -1,6 +1,5 @@
 .bundle
 tmp/
-coverage/
 db/*.sqlite3
 tmp/
 log/*.log
@@ -16,10 +15,7 @@ config/mailer_daemon.yml
 public/uploads/**/*
 public/topics
 public/topics/**/*
-.redcar
 .DS_Store
-*.swp
-*.swo
 .rvmrc
 vendor/ruby
 doc/wiki_repo
