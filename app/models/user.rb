@@ -10,8 +10,8 @@ class User
   
   validates_presence_of :password, :on => :create
   validates_presence_of :email
-  validates_uniqueness_of :email, :message => "this one is already taken, chose another..."
-  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
+  validates_uniqueness_of :email, :message => "this one is already taken, chose another"
+  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i, :message => "your email is invalid"
   # validates_length_of :password, :minimum => 6, :maximum => 16
   
   attr_accessor :password

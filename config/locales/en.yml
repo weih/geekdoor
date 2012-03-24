@@ -9,9 +9,9 @@ en:
         user:
           attributes:
             email:
-              presence: "input your email plz..."
+              presence: "input your email"
             password:
-              presence: "input your password plz..."
+              presence: "input your password"
         geekdoor:
           attributes:
             name:
