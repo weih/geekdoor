@@ -43,13 +43,13 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capistrano', '2.9.0'
   gem 'pry'
-  gem 'newrelic_rpm'
 end
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0',  :require => 'bcrypt'
 
 gem 'client_side_validations'
+gem 'newrelic_rpm'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
