@@ -121,6 +121,7 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    newrelic_rpm (3.3.2.1)
     nokogiri (1.5.0)
     polyglot (0.3.3)
     pry (0.9.8.4)
@@ -218,6 +219,7 @@ DEPENDENCIES
   launchy
   mongo-rails-instrumentation (= 0.2.4)
   mongoid (= 2.4.3)
+  newrelic_rpm
   pry
   quiet_assets!
   rails (= 3.2.1)

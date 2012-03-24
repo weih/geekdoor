@@ -43,6 +43,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capistrano', '2.9.0'
   gem 'pry'
+  gem 'newrelic_rpm'
 end
 
 # To use ActiveModel has_secure_password

@@ -1,7 +1,7 @@
 <% @user.geekdoors.each_slice(5) do |door_list| %>
   <ul class="door">
     <% door_list.each do |door| %>
-      <li class="door_link">
+      <li class="door_link" >
         <% if current_user %>
           <%= link_to "Delete", geekdoor_path(door), :method => "delete",
                                               :class => "delete_door" %>

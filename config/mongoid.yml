@@ -7,6 +7,11 @@ test:
   host: localhost
   database: door_test
   identity_map_enabled: true
+  
+staging:
+  host: localhost
+  database: door_development2
+  #identity_map_enabled: true
 
 # set these environment variables on your prod server
 production:
