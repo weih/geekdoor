@@ -5,13 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.destroy_all
+#User.destroy_all
 
-User.create(email: "admin@admin.com", password: "admin")
+#User.create(email: "admin@admin.com", password: "admin")
 admin = User.first
+admin.geekdoors.destroy_all
 admin.geekdoors.concat([Geekdoor.new(name: "Baidu", url: "http://www.baidu.com/s?wd=%s", hotkey: "q"),
                         Geekdoor.new(name: "Google", url: "http://www.google.com.hk/#hl=zh-CN&newwindow=1&safe=strict&site=&q=%s&oq=qwe&aq=f&aqi=g10&aql=&gs_sm=3&gs_upl=879l1047l0l1179l3l2l0l0l0l0l92l92l1l1l0&bav=on.2,or.r_gc.r_pw.,cf.osb&fp=855d35fbdb04d6a5&biw=1277&bih=638", hotkey: "w"),
-                        Geekdoor.new(name: "Bing", url: "http://cn.bing.com/search?%s=q&go=&qs=n&form=QBLH&pq=q&sc=8-1&sp=-1&sk=", hotkey: "p"),
+                        Geekdoor.new(name: "Bing", url: "cn.bing.com/search?q=%s&qs=n&form=QBLH&pq=123&sc=8-3&sp=-1&sk=", hotkey: "p"),
                         Geekdoor.new(name: "Ruby China", url: "http://ruby-china.org/search?q=%s", hotkey: "d"),
                         Geekdoor.new(name: "V2EX", url: "http://www.google.com.hk/search?q=site:v2ex.com/t%20%s", hotkey: "f"),
                         Geekdoor.new(name: "Bilibili", url: "http://www.bilibili.tv/search?keyword=%s&orderby=&formsubmit=", hotkey: "1"),
